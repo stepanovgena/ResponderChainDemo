@@ -47,13 +47,14 @@ struct Child: View {
             tappedButton = true
         }.background {
             if tappedButton {
-                Color(.clear).preference(
-                    key: OnTapPreferenceKey.self,
-                    value: "foo"
-                )
-                .onAppear {
-                    tappedButton = false
-                }
+                Color(.clear)
+                    .preference(
+                        key: OnTapPreferenceKey.self,
+                        value: "foo"
+                    )
+                    .onAppear {
+                        tappedButton = false
+                    }
             } else {
                 EmptyView()
             }
